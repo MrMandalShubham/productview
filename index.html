@@ -1,0 +1,66 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Loading...</title>  
+    <style>  
+        body {  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+            height: 100vh; /* Full viewport height */  
+            margin: 0;  
+            background-color: #D3D3D3; /* Light gray background */  
+            color: #333; /* Text Color */  
+            font-family: Arial, sans-serif;  
+            text-align: center;  
+        }  
+
+        .loader {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: flex-end;  
+            width: 100px; /* Loader width */  
+            height: 30px; /* Loader height */  
+            margin-bottom: 20px; /* Space between loader and text */  
+        }  
+        
+        .dot {  
+            background-color: #FF7F50; /* Soft orange color */  
+            border-radius: 50%; /* Circular dots */  
+            width: 20px; /* Dot size */  
+            height: 20px; /* Dot size */  
+            animation: bounce 0.6s infinite alternate; /* Bounce animation */  
+        }  
+
+        .dot:nth-child(2) {  
+            animation-delay: 0.2s; /* Delay for second dot */  
+        }  
+
+        .dot:nth-child(3) {  
+            animation-delay: 0.4s; /* Delay for third dot */  
+        }  
+
+        @keyframes bounce {  
+            from { transform: translateY(0); }  
+            to { transform: translateY(-20px); }  
+        }  
+    </style>  
+</head>  
+<body>  
+    <div class="loader">  
+        <div class="dot"></div>  
+        <div class="dot"></div>  
+        <div class="dot"></div>  
+    </div>  
+    <div>Loading, please wait...</div>  
+
+    <script>  
+        // Redirect to index.html after 2 seconds  
+        setTimeout(() => {  
+            window.location.href = 'index.html';  
+        }, 2000);  
+    </script>  
+</body>  
+</html>
