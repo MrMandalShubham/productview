@@ -3,64 +3,93 @@
 <head>  
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Loading...</title>  
+    <title>Loading Screen</title>  
     <style>  
         body {  
+            margin: 0;  
+            height: 100vh;  
             display: flex;  
+            flex-direction: column;  
             justify-content: center;  
             align-items: center;  
-            height: 100vh; /* Full viewport height */  
-            margin: 0;  
-            background-color: #D3D3D3; /* Light gray background */  
-            color: #333; /* Text Color */  
+            background-color: #2c3e50; /* Dark background */  
+            color: white; /* Text color */  
             font-family: Arial, sans-serif;  
-            text-align: center;  
         }  
 
         .loader {  
-            display: flex;  
-            justify-content: space-between;  
-            align-items: flex-end;  
-            width: 100px; /* Loader width */  
-            height: 30px; /* Loader height */  
-            margin-bottom: 20px; /* Space between loader and text */  
-        }  
-        
-        .dot {  
-            background-color: #FF7F50; /* Soft orange color */  
-            border-radius: 50%; /* Circular dots */  
-            width: 20px; /* Dot size */  
-            height: 20px; /* Dot size */  
-            animation: bounce 0.6s infinite alternate; /* Bounce animation */  
+            display: grid;  
+            grid-template-columns: repeat(2, 50px); /* 2 columns */  
+            grid-template-rows: repeat(2, 50px);    /* 2 rows */  
+            gap: 5px; /* Space between boxes */  
+            animation: loading 3s infinite;  
         }  
 
-        .dot:nth-child(2) {  
-            animation-delay: 0.2s; /* Delay for second dot */  
+        .box {  
+            width: 50px;  
+            height: 50px;  
+            animation: bounce 1s infinite;  
         }  
 
-        .dot:nth-child(3) {  
-            animation-delay: 0.4s; /* Delay for third dot */  
+        .red {  
+            background-color: red;  
+            animation-delay: 0s;  
+        }  
+
+        .pink {  
+            background-color: #ff7f7f;  
+            animation-delay: 0.2s;  
+        }  
+
+        .yellow {  
+            background-color: orange;  
+            animation-delay: 0.4s;  
+        }  
+
+        .orange {  
+            background-color: yellow;  
+            animation-delay: 0.6s;  
         }  
 
         @keyframes bounce {  
-            from { transform: translateY(0); }  
-            to { transform: translateY(-20px); }  
+            0%, 100% {  
+                transform: translateY(0);  
+            }  
+            50% {  
+                transform: translateY(-20px);  
+            }  
+        }  
+
+        @keyframes loading {  
+            0%, 100% {  
+                transform: scale(1);  
+            }  
+            50% {  
+                transform: scale(1.1);  
+            }  
+        }  
+
+        .quote {  
+            margin-top: 20px; /* Space above quote */  
+            font-size: 18px; /* Quote font size */  
+            text-align: center; /* Center the quote */  
         }  
     </style>  
 </head>  
 <body>  
     <div class="loader">  
-        <div class="dot"></div>  
-        <div class="dot"></div>  
-        <div class="dot"></div>  
+        <div class="box red"></div>  
+        <div class="box pink"></div>  
+        <div class="box yellow"></div>  
+        <div class="box orange"></div>  
     </div>  
-    <div>Loading, please wait...</div>  
+    <div class="quote">Hang tight... I’m ready to turn up the heat! 🔥</div>  
 
     <script>  
-        // Redirect to index.html after 2 seconds  
+        // Redirect to home.html after 3 seconds  
         setTimeout(() => {  
-            window.location.href = 'index.html';  
-        }, 2000);  
+            window.location.href = 'home.html';  
+        }, 3000);  
     </script>  
 </body>  
 </html>
