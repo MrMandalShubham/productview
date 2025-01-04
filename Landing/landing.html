@@ -1,0 +1,115 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Crypto Landing Page</title>  
+    <style>  
+        body {  
+            margin: 0;  
+            font-family: Arial, sans-serif;  
+            background: linear-gradient(180deg, #1c1c2d, #0a0a17);  
+            color: #fff;  
+            display: flex;  
+            flex-direction: column;  
+            align-items: center;  
+            justify-content: center;  
+            min-height: 100vh; /* Changed from height to min-height */  
+            overflow: auto; /* Allow scrolling */  
+        }  
+        h1 {  
+            margin-bottom: 10px;  
+            text-align: center;  
+        }  
+        p {  
+            margin-bottom: 20px; /* Adjusted margin for a more compact layout */  
+            text-align: center;  
+            max-width: 600px;  
+        }  
+        .container {  
+            display: flex;  
+            position: relative;  
+            flex-direction: column;  
+            align-items: center;  
+            width: 100%;  
+            max-width: 800px;  
+            margin-top: 20px;  
+        }  
+        .cards {  
+            display: flex;  
+            justify-content: center;  
+            flex-wrap: wrap;  
+            margin-bottom: 20px;  
+            width: 100%; /* Ensure full width */  
+        }  
+        .card {  
+            background: rgba(255, 255, 255, 0.1);  
+            border-radius: 10px;  
+            padding: 20px;   
+            text-align: center;  
+            min-width: 250px;  
+            margin: 10px;   
+            backdrop-filter: blur(10px);  
+            flex-grow: 1; /* Allow cards to grow in width */  
+            flex-basis: 30%; /* Make the card take 30% of the container on larger screens */  
+        }  
+        .btn {  
+            margin-top: 40px;  
+            padding: 15px 30px;  
+            background-color: #ff8c00;  
+            border: none;  
+            border-radius: 5px;  
+            color: #fff;  
+            cursor: pointer;  
+            transition: background-color 0.3s;  
+        }  
+        .btn:hover {  
+            background-color: #e07b00;  
+        }  
+        @media (max-width: 768px) {  
+            .cards {  
+                flex-direction: column; /* Stack cards vertically on mobile */  
+                align-items: center; /* Center the cards horizontally */  
+                overflow: auto; /* Allow scrolling */  
+            }  
+            .card {  
+                flex-basis: 80%; /* Each card takes 80% of the container width on mobile */  
+                margin: 10px; /* Maintain consistent spacing */  
+            }  
+        }  
+    </style>  
+</head>  
+<body>  
+
+    <h1>Transform Your Crypto Journey</h1>  
+    <p>Experience enhanced security, speed, and convenience with our cutting-edge cryptocurrency wallet. Created by Awsmd</p>  
+
+    <div class="container">  
+        <div class="cards" id="cards">  
+            <div class="card">  
+                <h3>Multi-Currency Support</h3>  
+                <p>Store and manage multiple cryptocurrencies in one wallet.</p>  
+            </div>  
+            <div class="card">  
+                <h3>Price Forecasting</h3>  
+                <p>Receive price predictions and AI-based insights to make informed investment decisions.</p>  
+            </div>  
+            <div class="card">  
+                <h3>Fast Transactions</h3>  
+                <p>Instantly send and receive cryptocurrency worldwide without delays.</p>  
+            </div>  
+            <div class="card">  
+                <h3>Crypto Analysis</h3>  
+                <p>In-depth analysis of cryptocurrency trends and market behavior.</p>  
+            </div>  
+            <div class="card">  
+                <h3>Crypto New Tech</h3>  
+                <p>Stay updated with the latest technologies in the cryptocurrency space.</p>  
+            </div>  
+        </div>  
+    </div>  
+
+    <button class="btn" onclick="alert('Get in touch!')">Get in touch</button>  
+
+</body>  
+</html>
